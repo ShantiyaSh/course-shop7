@@ -18,7 +18,6 @@ const getAllCourses = () => {
       .catch(() => setIsError(true));
     setIsLoading(false);
   }, []);
-
   return { courses, isLoading, isError };
 };
 export default getAllCourses;
