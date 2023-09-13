@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div>
+    <div className="footer">
       <p>author: Shantiya</p>
       <p>email: shamushaki.shantiya@gmail.com</p>
     </div>

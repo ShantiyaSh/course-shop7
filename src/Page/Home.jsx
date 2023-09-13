@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import getAllCourses from "../Hooks/getAllCourses";
+import Layout from "../Component/Layout";
 
 const Home = () => {
   const { courses, isLoading, isError } = getAllCourses();
   if (isLoading) return <h1>loading...</h1>;
   if (isError) return <h1>there was an error</h1>;
   return (
-    <div>
+    <Layout>
       {courses.map(({ id, name }) => {
         return (
           <p key={id}>
@@ -14,7 +15,7 @@ const Home = () => {
           </p>
         );
       })}
-    </div>
+    </Layout>
   );
 };
 export default Home;
