@@ -1,0 +1,82 @@
+[
+  {
+    "id": "C001",
+    "name": "Introduction to Programming",
+    "author": "John Smith",
+    "price": "8 weeks",
+    "description": "Learn the basics of programming with this introductory course.",
+    "enrollmentStatus": "Open"
+  },
+  {
+    "id": "C002",
+    "name": "Web Development Fundamentals",
+    "author": "Emily Davis",
+    "price": "10 weeks",
+    "description": "Get started with web development and build your first websites.",
+    "enrollmentStatus": "Open"
+  },
+  {
+    "id": "C003",
+    "name": "Data Science Essentials",
+    "author": "Michael Johnson",
+    "price": "12 weeks",
+    "description": "Explore the world of data science and analytics.",
+    "enrollmentStatus": "Open"
+  },
+  {
+    "id": "C004",
+    "name": "Graphic Design Basics",
+    "author": "Sophia Martinez",
+    "price": "6 weeks",
+    "description": "Learn the fundamentals of graphic design and visual communication.",
+    "enrollmentStatus": "Open"
+  },
+  {
+    "id": "C005",
+    "name": "Mobile App Development",
+    "author": "David Wilson",
+    "price": "14 weeks",
+    "description": "Create mobile apps for iOS and Android platforms.",
+    "enrollmentStatus": "Open"
+  },
+  {
+    "id": "C006",
+    "name": "Machine Learning with Python",
+    "author": "Alice Brown",
+    "price": "16 weeks",
+    "description": "Explore machine learning techniques using Python programming.",
+    "enrollmentStatus": "Open"
+  },
+  {
+    "id": "C007",
+    "name": "Digital Marketing Strategies",
+    "author": "Mark Anderson",
+    "price": "8 weeks",
+    "description": "Learn effective digital marketing strategies for businesses.",
+    "enrollmentStatus": "Open"
+  },
+  {
+    "id": "C008",
+    "name": "Financial Planning and Investment",
+    "author": "Karen White",
+    "price": "10 weeks",
+    "description": "Understand personal finance and investment strategies.",
+    "enrollmentStatus": "Open"
+  },
+  {
+    "id": "C009",
+    "name": "Photography Masterclass",
+    "author": "Olivia Taylor",
+    "price": "6 weeks",
+    "description": "Enhance your photography skills and techniques.",
+    "enrollmentStatus": "Open"
+  },
+  {
+    "id": "C010",
+    "name": "Artificial Intelligence Fundamentals",
+    "author": "Daniel Lee",
+    "price": "12 weeks",
+    "description": "Explore the basics of artificial intelligence and machine learning.",
+    "enrollmentStatus": "Open"
+  }
+]
