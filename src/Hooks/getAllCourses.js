@@ -6,7 +6,7 @@ const getAllCourses = () => {
   const [isError, setIsError] = useState(false);
 
   useEffect(() => {
-    fetch("https://react-task-8dd8e-default-rtdb.firebaseio.com/")
+    fetch("https://6501cae8736d26322f5c4b91.mockapi.io/courses")
       .then((response) => {
         if (!response.ok) {
           setIsError(true);
@@ -15,10 +15,7 @@ const getAllCourses = () => {
         return response.json();
       })
       .then((json) => setCourses(json))
-      .catch((err) => {
-        console.log(err);
-        setIsError(true);
-      });
+      .catch(() => setIsError(true));
     setIsLoading(false);
   }, []);
 
