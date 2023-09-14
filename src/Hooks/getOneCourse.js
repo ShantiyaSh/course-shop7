@@ -4,8 +4,11 @@ const getOneCourse = (id, isUpdateSuccess) => {
   const [course, setCourse] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
+
   useEffect(() => {
-    fetch(`https://6501cae8736d26322f5c4b91.mockapi.io/courses/${id}`)
+    fetch(
+      `https://my-json-server.typicode.com/ShantiyaSh/db.json/courses/${id}`
+    )
       .then((response) => {
         if (!response.ok) {
           setIsError(true);
@@ -20,4 +23,5 @@ const getOneCourse = (id, isUpdateSuccess) => {
 
   return { course, isLoading, isError };
 };
+
 export default getOneCourse;

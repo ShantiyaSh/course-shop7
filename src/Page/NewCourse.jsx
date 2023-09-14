@@ -1,7 +1,18 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import postCourse from "../Hooks/postCourse";
+import Layout from "../Component/Layout";
+import { useNavigate } from "react-router-dom";
+import {
+  Button,
+  Card,
+  Input,
+  Textarea,
+  Typography,
+} from "@material-tailwind/react";
 
 const NewCourse = () => {
+  const navigate = useNavigate();
+
   const form = useRef();
   const handleForm = async (e) => {
     e.preventDefault();
@@ -14,21 +25,48 @@ const NewCourse = () => {
       avatar: e.target.avatar.files[0],
     };
     const result = await postCourse(payload);
+    if (result) {
+      navigate("/", { state: { new: true } });
+    }
   };
   return (
-    <form ref={form} onSubmit={handleForm}>
-      <label>name</label>
-      <input type="text" name="name" />
-      <label>author</label>
-      <input type="text" name="author" />
-      <label>description</label>
-      <textarea type="text" name="description" rows="3"></textarea>
-      <label>price</label>
-      <input type="number" name="price" />
-      <label>image</label>
-      <input type="file" name="avatar" />
-      <button type="submit">submit</button>
-    </form>
+    <Layout>
+      <Card color="transparent" className="w-1/2 mx-auto border p-5 my-10">
+        <Typography variant="h4" color="blue-gray">
+          Publish New Course
+        </Typography>
+        <form
+          className="flex flex-col gap-5 mt-5"
+          ref={form}
+          onSubmit={handleForm}
+        >
+          <Input label="Name" type="text" name="name" required />
+          <Input label="Author" type="text" name="author" required />
+          <Textarea
+            label="Summery"
+            type="text"
+            name="description"
+            rows="3"
+            required
+          />
+          <Input label="Price" type="number" name="price" required />
+
+          <label htmlFor="Image-input" className="w-full border p-4">
+            Upload Image
+          </label>
+          <input
+            style={{ display: "none" }}
+            id="Image-input"
+            label="Image"
+            type="file"
+            name="avatar"
+          />
+          <Button className="mt-6" fullWidth type="submit">
+            Submit
+          </Button>
+        </form>
+      </Card>
+    </Layout>
   );
 };
 export default NewCourse;

@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./Page/Home";
 import Single from "./Page/Single";
 import NewCourse from "./Page/NewCourse";
+import "./index.css";
 
 function App() {
   return (

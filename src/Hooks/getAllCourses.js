@@ -6,7 +6,7 @@ const getAllCourses = () => {
   const [isError, setIsError] = useState(false);
 
   useEffect(() => {
-    fetch("https://6501cae8736d26322f5c4b91.mockapi.io/courses")
+    fetch("https://my-json-server.typicode.com/ShantiyaSh/db.json/courses")
       .then((response) => {
         if (!response.ok) {
           setIsError(true);

@@ -1,5 +1,5 @@
 const postCourse = async (payload) => {
-  const url = `https://6501cae8736d26322f5c4b91.mockapi.io/courses`;
+  const url = `https://my-json-server.typicode.com/ShantiyaSh/db.json/courses`;
   const headers = {
     method: "POST",
     headers: {
@@ -10,6 +10,8 @@ const postCourse = async (payload) => {
   try {
     const response = await fetch(url, headers);
     if (!response.ok) return false;
+    const json = await response.json();
+    console.log(json);
   } catch (error) {
     return false;
   }
